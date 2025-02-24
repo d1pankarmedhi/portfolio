@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { name: 'Home', to: 'home' },
-  { name: 'About', to: 'about' },
-  { name: 'Experience', to: 'experience' },
-  { name: 'Projects', to: 'projects' },
-  { name: 'Blog', to: 'blog' },
-  { name: 'Publications', to: 'publications' },
+  { name: "Home", to: "home" },
+  { name: "About", to: "about" },
+  { name: "Experience", to: "experience" },
+  { name: "Projects", to: "projects" },
+  { name: "Blog", to: "blog" },
+  { name: "Publications", to: "publications" },
 ];
 
 const Navbar = () => {
@@ -20,14 +20,16 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link
@@ -36,7 +38,7 @@ const Navbar = () => {
             duration={500}
             className="text-2xl font-bold cursor-pointer"
           >
-            Portfolio
+            Dipankar.Medhi
           </Link>
 
           {/* Desktop Navigation */}
