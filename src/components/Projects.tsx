@@ -1,117 +1,127 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNavigation,
-} from "@/components/ui/custom-carousel";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ExternalLink, Github } from 'lucide-react';
 
-interface ProjectLink {
-  icon: string;
-  url: string;
-}
+const projects = [
+  {
+    title: "AI-Powered Task Manager",
+    description: "A smart task management system that uses machine learning to prioritize and categorize tasks automatically.",
+    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800",
+    demoLink: "https://demo-task-manager.com",
+    githubLink: "https://github.com/johndoe/task-manager",
+    technologies: ["React", "Python", "TensorFlow", "FastAPI"]
+  },
+  {
+    title: "Real-time Collaboration Platform",
+    description: "A WebSocket-based platform enabling real-time document editing and team collaboration.",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
+    demoLink: "https://collab-platform.com",
+    githubLink: "https://github.com/johndoe/collab-platform",
+    technologies: ["Next.js", "Socket.io", "MongoDB", "Docker"]
+  },
+  {
+    title: "Blockchain Voting System",
+    description: "A secure and transparent voting system built on Ethereum blockchain.",
+    image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop&q=80&w=800",
+    demoLink: "https://blockchain-vote.com",
+    githubLink: "https://github.com/johndoe/blockchain-vote",
+    technologies: ["Solidity", "Web3.js", "React", "Node.js"]
+  },
+  {
+    title: "Smart Home Automation",
+    description: "IoT-based home automation system with mobile app control and energy monitoring.",
+    image: "https://images.unsplash.com/photo-1558002038-876f1d0aa8d6?auto=format&fit=crop&q=80&w=800",
+    demoLink: "https://smart-home-demo.com",
+    githubLink: "https://github.com/johndoe/smart-home",
+    technologies: ["React Native", "Node.js", "MQTT", "PostgreSQL"]
+  },
+  {
+    title: "AI Image Generator",
+    description: "A deep learning-based image generation tool using GANs.",
+    image: "https://images.unsplash.com/photo-1547954575-855750c57bd3?auto=format&fit=crop&q=80&w=800",
+    demoLink: "https://ai-image-gen.com",
+    githubLink: "https://github.com/johndoe/ai-image-gen",
+    technologies: ["Python", "PyTorch", "FastAPI", "React"]
+  }
+];
 
-interface Project {
-  title: string;
-  description: string;
-  period: string;
-  image: string;
-  links: ProjectLink[];
-}
-
-interface ProjectsProps {
-  projects: Project[];
-}
-
-const Projects: React.FC<ProjectsProps> = ({ projects }) => {
-  const truncateText = (text: string, maxLength: number = 80) => {
-    return text.length > maxLength
-      ? `${text.substring(0, maxLength)}...`
-      : text;
-  };
+const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <section className="mb-12 relative">
-      <h2 className="text-xl font-bold mb-6">Featured</h2>
-
-      <div className="relative w-full">
-        <Carousel>
-          <CarouselContent className="-ml-4">
-            {projects.map((project, index) => (
-              <CarouselItem
+    <section id="projects" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold text-gray-900 mb-12">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {displayedProjects.map((project, index) => (
+              <motion.div
                 key={index}
-                className="basis-full sm:basis-1/2 md:basis-1/3 pl-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl overflow-hidden shadow-lg"
               >
-                <div className="relative group">
-                  <a
-                    href={project.links[0]?.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block sm:pointer-events-none"
-                  >
-                    <Card className="h-[400px] flex flex-col bg-gradient-to-r from-yellow-100/20 to-amber-100/30 dark:from-yellow-50/10 dark:to-yellow-100/10 border border-amber-200/30 dark:border-yellow-200/20 hover:bg-amber-100/40 dark:hover:bg-yellow-100/5 transition-all duration-200 shadow-sm">
-                      <div className="h-48 shrink-0 overflow-hidden">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <CardContent className="p-4 flex flex-col flex-1">
-                        <h3 className="font-bold text-lg">{project.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-2">
-                          {project.period}
-                        </p>
-                        <p className="text-sm mb-4 flex-1">
-                          {truncateText(project.description)}
-                        </p>
-                        <div className="flex gap-2 sm:relative sm:z-10">
-                          <TooltipProvider delayDuration={0}>
-                            {project.links.map((link, linkIndex) => (
-                              <Tooltip key={linkIndex}>
-                                <TooltipTrigger asChild>
-                                  <a
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="sm:pointer-events-auto"
-                                  >
-                                    <img
-                                      src={link.icon}
-                                      alt="Link"
-                                      className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity"
-                                    />
-                                  </a>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                  <p>See project</p>
-                                </TooltipContent>
-                              </Tooltip>
-                            ))}
-                          </TooltipProvider>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </a>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex space-x-4">
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-blue-600 hover:text-blue-800"
+                    >
+                      <ExternalLink size={16} className="mr-1" />
+                      Demo
+                    </a>
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-gray-700 hover:text-gray-900"
+                    >
+                      <Github size={16} className="mr-1" />
+                      Code
+                    </a>
+                  </div>
                 </div>
-              </CarouselItem>
+              </motion.div>
             ))}
-          </CarouselContent>
-          <div className="flex justify-center mt-10">
-            <CarouselNavigation
-              className="static w-auto justify-center gap-4"
-              classNameButton="bg-zinc-800 *:stroke-zinc-50 dark:bg-zinc-200 dark:*:stroke-zinc-800"
-              alwaysShow
-            />
           </div>
-        </Carousel>
+          {projects.length > 3 && (
+            <div className="text-center mt-12">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                {showAll ? 'Show Less' : 'More Projects'}
+              </button>
+            </div>
+          )}
+        </motion.div>
       </div>
     </section>
   );
