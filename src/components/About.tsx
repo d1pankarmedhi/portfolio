@@ -1,24 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Download, Code2, Server, Database, Cloud, Terminal, Github as Git, Monitor, Layout, Cpu } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Download,
+  Code2,
+  Server,
+  Database,
+  Cloud,
+  Terminal,
+  Github as Git,
+  Monitor,
+  Layout,
+  Cpu,
+} from "lucide-react";
 
 const skills = {
-  'Frontend Development': {
+  "Frontend Development": {
     icon: <Layout className="w-6 h-6 mb-2" />,
-    skills: ['React.js', 'Next.js', 'TypeScript', 'TailwindCSS']
+    skills: ["React.js", "Next.js", "TypeScript", "TailwindCSS"],
   },
-  'Backend Development': {
+  "Backend Development": {
     icon: <Server className="w-6 h-6 mb-2" />,
-    skills: ['Node.js', 'Python', 'GraphQL', 'RESTful APIs']
+    skills: ["Node.js", "Python", "GraphQL", "RESTful APIs"],
   },
-  'Database & Cloud': {
+  "Database & Cloud": {
     icon: <Cloud className="w-6 h-6 mb-2" />,
-    skills: ['PostgreSQL', 'MongoDB', 'AWS', 'Docker']
+    skills: ["PostgreSQL", "MongoDB", "AWS", "Docker"],
   },
-  'Tools & Technologies': {
+  "Tools & Technologies": {
     icon: <Terminal className="w-6 h-6 mb-2" />,
-    skills: ['Git', 'CI/CD', 'Jest', 'Webpack']
-  }
+    skills: ["Git", "CI/CD", "Jest", "Webpack"],
+  },
 };
 
 const About = () => {
@@ -35,33 +46,43 @@ const About = () => {
           <h2 className="text-4xl font-bold text-gray-900">About Me</h2>
           <div className="prose prose-lg max-w-none">
             <p>
-              I am a passionate software engineer with a Master's degree in Computer Science from Stanford University. 
-              My academic journey began with a Bachelor's in Computer Engineering from MIT, where I developed a strong 
-              foundation in algorithms, distributed systems, and machine learning.
+              Passionate about creating innovative solutions with modern SOTA AI
+              technologies. I'm a Data & Machine Learning Engineer with a strong
+              focus on building robust and scalable systems that solve
+              real-world problems. My expertise lies in leveraging cutting-edge
+              AI technologies to drive innovation and deliver exceptional user
+              experiences.
             </p>
             <p>
-              Beyond coding, I'm an avid rock climber and have been practicing this sport for over 5 years. 
-              I find that climbing challenges me both physically and mentally, much like solving complex 
-              programming problems. I'm also a photography enthusiast, particularly interested in landscape 
-              and astrophotography. These hobbies help me maintain a creative perspective that I bring to 
-              my technical work.
+              Beyound my technical expertise, I'm a hardworking individual who
+              thrives on challenges. I'm always eager to learn and stay
+              up-to-date with the latest advancements in the field. I'm a team
+              player who thrives in collaborative environments and a problem
+              solver at heart.
             </p>
             <p>
-              I'm deeply interested in open-source development and regularly contribute to various projects. 
-              In my free time, I enjoy writing technical blog posts, mentoring junior developers, and 
-              participating in local tech meetups. I'm particularly passionate about developer tooling and 
-              automation, always looking for ways to improve development workflows.
+              I'm deeply interested in AI/ML and its potential to revolutionize
+              industries. I love to share my knowledge and experiences with
+              others in the community. I write blog posts on various topics and
+              share my insights on social media platforms.
             </p>
           </div>
-          
+
           <div className="mt-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Skills & Technologies</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              Skills & Technologies
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {Object.entries(skills).map(([category, { icon, skills }]) => (
-                <div key={category} className="bg-gray-50 rounded-xl p-6 shadow-md">
+                <div
+                  key={category}
+                  className="bg-gray-50 rounded-xl p-6 shadow-md"
+                >
                   <div className="flex flex-col items-center mb-4">
                     {icon}
-                    <h4 className="text-lg font-semibold text-gray-900">{category}</h4>
+                    <h4 className="text-lg font-semibold text-gray-900">
+                      {category}
+                    </h4>
                   </div>
                   <div className="space-y-2">
                     {skills.map((skill) => (
@@ -77,7 +98,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          
+
           <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
             <Download size={20} className="mr-2" />
             Download Resume
