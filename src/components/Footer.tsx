@@ -11,7 +11,7 @@ const Footer = () => {
             <p className="text-gray-400">Data & Machine Learning Engineer</p>
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/d1pankarmedhi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -19,7 +19,7 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dipankarmedhi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"

@@ -1,41 +1,30 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Building2, Calendar } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Building2, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    company: "Google",
-    role: "Senior Software Engineer",
-    location: "Mountain View, CA",
-    timeline: "Jan 2020 - Present",
+    company: "Flexday AI",
+    role: "AI/ML Engineer",
+    location: "Remote, India",
+    timeline: "Nov 2022 - Present",
     responsibilities: [
-      "Led the development of a microservices architecture that improved system scalability by 300%",
-      "Mentored a team of 5 junior engineers and implemented best practices that reduced bug reports by 45%",
-      "Architected and deployed cloud-native solutions using Google Cloud Platform, serving 1M+ daily users"
-    ]
+      "Developed Conversational Data Analytics platform, powered by Generative Models, serving 10k + daily users",
+      "Led the optimization of the retrieval and re-ranking pipeline, reducing latency by 56%",
+      "Researched and implemented Vision Language Models for visual question answering, improving overall response accuracy.",
+    ],
   },
   {
-    company: "Microsoft",
-    role: "Software Engineer",
-    location: "Seattle, WA",
-    timeline: "Jun 2017 - Dec 2019",
+    company: "Leokraft Technologies",
+    role: "Machine Learning Engineer",
+    location: "Remote, India",
+    timeline: "Aug 2022 - Oct 2022",
     responsibilities: [
-      "Developed and maintained core features for Azure DevOps, focusing on CI/CD pipeline improvements",
-      "Implemented real-time collaboration features using WebSocket, improving team productivity by 30%",
-      "Led the migration of legacy systems to modern React-based architecture"
-    ]
+      "Developed classification pipeline using sentiment analysis with transformer models for categorization of social media posts",
+      "Created thorough technical documentation and high-level workflow diagrams to streamline the development process",
+      "Debugged and resolved CI/CD issues and containerized ML services using Docker, ensuring continuous deployment of ML services. ",
+    ],
   },
-  {
-    company: "Amazon",
-    role: "Software Development Engineer",
-    location: "Seattle, WA",
-    timeline: "Jul 2015 - May 2017",
-    responsibilities: [
-      "Built and optimized RESTful APIs for the Amazon Marketplace, handling 50K+ requests per second",
-      "Implemented automated testing frameworks that reduced deployment time by 40%",
-      "Designed and developed inventory management systems using microservices architecture"
-    ]
-  }
 ];
 
 const Experience = () => {
@@ -61,7 +50,9 @@ const Experience = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{exp.role}</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {exp.role}
+                    </h3>
                     <div className="flex items-center mt-2 text-gray-600">
                       <Building2 size={18} className="mr-2" />
                       <span>{exp.company}</span>
