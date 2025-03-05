@@ -14,21 +14,37 @@ import {
 } from "lucide-react";
 
 const skills = {
-  "Frontend Development": {
+  Languages: {
+    icon: <Code2 className="w-6 h-6 mb-2" />,
+    skills: ["Python", "C++", "Rust", "Javascript"],
+  },
+  Frameworks: {
     icon: <Layout className="w-6 h-6 mb-2" />,
-    skills: ["React.js", "Next.js", "TypeScript", "TailwindCSS"],
+    skills: [
+      "FastAPI",
+      "Flask",
+      "ReactJs",
+      "PyTorch",
+      "Tensorflow",
+      "Scikit-learn",
+      "Asyncio",
+    ],
   },
-  "Backend Development": {
-    icon: <Server className="w-6 h-6 mb-2" />,
-    skills: ["Node.js", "Python", "GraphQL", "RESTful APIs"],
+  Databases: {
+    icon: <Database className="w-6 h-6 mb-2" />,
+    skills: ["PostgreSQL", "MongoDB", "Elasticsearch", "Pinecone", "Qdrant"],
   },
-  "Database & Cloud": {
-    icon: <Cloud className="w-6 h-6 mb-2" />,
-    skills: ["PostgreSQL", "MongoDB", "AWS", "Docker"],
-  },
-  "Tools & Technologies": {
+  Tools: {
     icon: <Terminal className="w-6 h-6 mb-2" />,
-    skills: ["Git", "CI/CD", "Jest", "Webpack"],
+    skills: ["Git", "Github-actions", "Docker", "Kafka", "RabbitMQ"],
+  },
+  "CI/CD": {
+    icon: <Git className="w-6 h-6 mb-2" />,
+    skills: ["Github-actions", "SonarQube", "JFrog", "Octopus"],
+  },
+  Cloud: {
+    icon: <Cloud className="w-6 h-6 mb-2" />,
+    skills: ["Azure", "AWS"],
   },
 };
 
@@ -72,11 +88,16 @@ const About = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Skills & Technologies
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              className="grid gap-4 auto-rows-[minmax(100px,auto)]"
+              style={{
+                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              }}
+            >
               {Object.entries(skills).map(([category, { icon, skills }]) => (
                 <div
                   key={category}
-                  className="bg-gray-50 rounded-xl p-6 shadow-md"
+                  className="bg-gray-50 rounded-xl p-6 shadow-md flex flex-col"
                 >
                   <div className="flex flex-col items-center mb-4">
                     {icon}
@@ -84,7 +105,7 @@ const About = () => {
                       {category}
                     </h4>
                   </div>
-                  <div className="space-y-2">
+                  <div className="flex flex-col gap-2">
                     {skills.map((skill) => (
                       <div
                         key={skill}
@@ -99,10 +120,17 @@ const About = () => {
             </div>
           </div>
 
-          <button className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
-            <Download size={20} className="mr-2" />
-            Download Resume
-          </button>
+          <div className="flex justify-center">
+            <a
+              href="https://drive.google.com/uc?export=download&id=1V7ENLgkUKWvZ2Ij7O96KZ7N2TfNyWl4e"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors cursor-pointer"
+            >
+              <Download size={20} className="mr-2" />
+              Download Resume
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
