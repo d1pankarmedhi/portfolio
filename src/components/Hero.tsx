@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github as GitHub, Linkedin, Mail } from "lucide-react";
+import { Github as GitHub, Smile, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -49,6 +49,14 @@ const Hero = () => {
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               <Mail size={24} />
+            </a>
+            <a
+              href="https://huggingface.co/dmedhi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <Smile size={24} />
             </a>
           </div>
         </motion.div>
