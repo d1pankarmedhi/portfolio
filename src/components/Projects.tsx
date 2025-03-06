@@ -1,48 +1,67 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "AI-Powered Task Manager",
-    description: "A smart task management system that uses machine learning to prioritize and categorize tasks automatically.",
-    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=800",
-    demoLink: "https://demo-task-manager.com",
-    githubLink: "https://github.com/johndoe/task-manager",
-    technologies: ["React", "Python", "TensorFlow", "FastAPI"]
+    title: "InsightFlow",
+    description:
+      "A Generative AI powered Question-Answering, Data Analytics system that allows users to upload structured data like CSV, Excel files and query data interactively.",
+    image:
+      "https://github.com/user-attachments/assets/7cb98fe4-0cc0-4fdc-86d9-75c4cd1befe9",
+    githubLink: "https://github.com/d1pankarmedhi/InsightFlow",
+    technologies: ["Python", "LLM", "NLP", "Code-generation"],
   },
   {
-    title: "Real-time Collaboration Platform",
-    description: "A WebSocket-based platform enabling real-time document editing and team collaboration.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-    demoLink: "https://collab-platform.com",
-    githubLink: "https://github.com/johndoe/collab-platform",
-    technologies: ["Next.js", "Socket.io", "MongoDB", "Docker"]
+    title: "Legal Summarizer",
+    description:
+      "Summarizing legal documents made easy using Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs).",
+    image:
+      "https://github.com/d1pankarmedhi/legal_summarizer/assets/136924835/4968735b-b3a8-4633-8edd-6b8bed7ba558",
+    // demoLink: "https://collab-platform.com",
+    githubLink: "https://github.com/d1pankarmedhi/legal_summarizer",
+    technologies: ["Weaviate", "Pinecone", "Langchain"],
   },
   {
-    title: "Blockchain Voting System",
-    description: "A secure and transparent voting system built on Ethereum blockchain.",
-    image: "https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop&q=80&w=800",
-    demoLink: "https://blockchain-vote.com",
-    githubLink: "https://github.com/johndoe/blockchain-vote",
-    technologies: ["Solidity", "Web3.js", "React", "Node.js"]
+    title: "Pruning Networks",
+    description:
+      "Fine-grained pruning for a ResNet like architecture in PyTorch.",
+    image:
+      "https://github.com/user-attachments/assets/63a5043a-33bf-40ab-8f71-663bedbe371e",
+    // demoLink: "https://blockchain-vote.com",
+    githubLink: "https://github.com/d1pankarmedhi/fine-grained-pruning",
+    technologies: ["PyTorch", "Pruning", "Fine-grained", "Deep Learning"],
   },
   {
-    title: "Smart Home Automation",
-    description: "IoT-based home automation system with mobile app control and energy monitoring.",
-    image: "https://images.unsplash.com/photo-1558002038-876f1d0aa8d6?auto=format&fit=crop&q=80&w=800",
-    demoLink: "https://smart-home-demo.com",
-    githubLink: "https://github.com/johndoe/smart-home",
-    technologies: ["React Native", "Node.js", "MQTT", "PostgreSQL"]
+    title: "Image Search Engine",
+    description:
+      "A vector-based image search engine, leveraging Vision Transformer (CLIP).",
+    image:
+      "https://github.com/d1pankarmedhi/image-search-engine/assets/136924835/19637f25-bc5f-4a90-982e-24efe6109a22",
+    demoLink: "https://huggingface.co/spaces/dmedhi/image-search-engine",
+    githubLink: "https://github.com/d1pankarmedhi/image-search-engine",
+    technologies: ["VLM", "CLIP", "Vision Transformer", "Computer Vision"],
   },
   {
-    title: "AI Image Generator",
-    description: "A deep learning-based image generation tool using GANs.",
-    image: "https://images.unsplash.com/photo-1547954575-855750c57bd3?auto=format&fit=crop&q=80&w=800",
-    demoLink: "https://ai-image-gen.com",
-    githubLink: "https://github.com/johndoe/ai-image-gen",
-    technologies: ["Python", "PyTorch", "FastAPI", "React"]
-  }
+    title: "Private RAG lite",
+    description:
+      "A lightweight conversational RAG pipeline for your private documents utilizing Phi-3-mini.",
+    image:
+      "https://github.com/user-attachments/assets/ddfe0cc3-bf7b-4df9-92c8-b62de167c939",
+    demoLink: "https://huggingface.co/spaces/dmedhi/phi-3-RAG",
+    githubLink: "https://github.com/d1pankarmedhi/private-RAG-lite",
+    technologies: ["Python", "PyTorch", "FastAPI", "Hugging Face"],
+  },
+  {
+    title: "Phi-3 Rust",
+    description:
+      "Phi-3 inference engine using Rust, Actix-web and Candle for fast and efficient inference.",
+    image:
+      "https://github.com/user-attachments/assets/ba83d47e-0649-4e7f-8373-850469440b11",
+    // demoLink: "https://blockchain-vote.com",
+    githubLink: "https://github.com/d1pankarmedhi/Phi3-rust",
+    technologies: ["Rust", "Phi3", "Actix-web", "Candle"],
+  },
 ];
 
 const Projects = () => {
@@ -75,7 +94,9 @@ const Projects = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, idx) => (
@@ -117,7 +138,7 @@ const Projects = () => {
                 onClick={() => setShowAll(!showAll)}
                 className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
               >
-                {showAll ? 'Show Less' : 'More Projects'}
+                {showAll ? "Show Less" : "More Projects"}
               </button>
             </div>
           )}
