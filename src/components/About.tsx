@@ -3,14 +3,11 @@ import { motion } from "framer-motion";
 import {
   Download,
   Code2,
-  Server,
   Database,
   Cloud,
   Terminal,
   Github as Git,
-  Monitor,
   Layout,
-  Cpu,
 } from "lucide-react";
 
 const skills = {
