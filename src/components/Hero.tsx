@@ -19,7 +19,7 @@ const Hero = () => {
             Dipankar Medhi
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-600 mb-8">
-            Data & Machine Learning Engineer
+            AI & Machine Learning Engineer
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
             Building innovative solutions with modern SOTA AI technologies.
