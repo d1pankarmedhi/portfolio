@@ -43,7 +43,7 @@ const projects = [
     technologies: ["VLM", "CLIP", "Vision Transformer", "Computer Vision"],
   },
   {
-    title: "Private RAG lite",
+    title: "Rag with Phi-3",
     description:
       "A lightweight conversational RAG pipeline for your private documents utilizing Phi-3-mini.",
     image:
@@ -61,6 +61,55 @@ const projects = [
     // demoLink: "https://blockchain-vote.com",
     githubLink: "https://github.com/d1pankarmedhi/Phi3-rust",
     technologies: ["Rust", "Phi3", "Actix-web", "Candle"],
+  },
+  {
+    title: "Document Parsing",
+    description:
+      "Collection of document parsing techniques, methods and tools.",
+    image:
+      "https://github.com/user-attachments/assets/71851efd-28ac-456c-b459-c4030a8ec84a",
+    // demoLink: "https://blockchain-vote.com",
+    githubLink: "https://github.com/d1pankarmedhi/document_parsing",
+    technologies: ["Python", "NLP", "Document Parsing"],
+  },
+  {
+    title: "Ping Pong C++",
+    description:
+      "A Ping Pong game with SFML and C++ using Axis Aligned Bounding Box collision technique.",
+    image:
+      "https://github.com/user-attachments/assets/383ee662-2b31-4fba-a5fc-38fc19d2ecd4",
+    // demoLink: "https://blockchain-vote.com",
+    githubLink: "https://github.com/d1pankarmedhi/PingPong",
+    technologies: ["C++", "SFML", "Game Development"],
+  },
+  {
+    title: "Human Face Generation using GANs",
+    description:
+      "A Generative Adversarial Network (GAN) based model to generate human faces.",
+    image:
+      "https://github.com/user-attachments/assets/db31db02-fc16-46e8-9e6f-85923137f2f7",
+    // demoLink: "https://blockchain-vote.com",
+    githubLink: "https://github.com/d1pankarmedhi/face-generation-GAN",
+    technologies: ["GAN", "PyTorch", "Deep Learning", "Computer Vision"],
+  },
+  {
+    title: "Chunkr",
+    description: "A Rust based document chunking library.",
+    image:
+      "https://github.com/user-attachments/assets/dbf62a46-299c-493a-a410-b53427715390",
+    demoLink: "https://crates.io/crates/chunkr",
+    githubLink: "https://github.com/d1pankarmedhi/chunkr",
+    technologies: ["Rust", "NLP", "Document Chunking"],
+  },
+  {
+    title: "Vehicle Detection",
+    description:
+      "A vehicle detection and tracking system using YOLOv8 and OpenCV.",
+    image:
+      "https://github.com/d1pankarmedhi/vehicle-detection/blob/main/demo.gif?raw=true",
+    // demoLink: "https://crates.io/crates/chunkr",
+    githubLink: "https://github.com/d1pankarmedhi/vehicle-detection",
+    technologies: ["YOLOv8", "OpenCV", "Computer Vision"],
   },
 ];
 
