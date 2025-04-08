@@ -9,21 +9,25 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { DockMenu } from "../components/DockMenu";
 import { Cta11 } from "@/components/ui/cta11";
+import { Mail } from "lucide-react";
+
 const Index = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   // Sample data for the portfolio
   const workExperience = [
     {
       company: "Flexday",
       title: "Machine Learning Engineer",
       period: "Nov 2022 - Present",
-      logo: "/flexday.svg",
+      logo: `${baseUrl}flexday.svg`,
       logoClass: "organization-logo",
     },
     {
       company: "Leokraft",
       title: "ML Developer",
       period: "Aug 2022 - Nov 2022",
-      logo: "/lime.svg",
+      logo: `${baseUrl}lime.svg`,
       logoClass: "organization-logo",
     },
   ];
@@ -33,7 +37,7 @@ const Index = () => {
       institution: "Assam Engineering College",
       degree: "Bachelor of Technology (B.Tech)",
       period: "2018 - 2022",
-      logo: "/aec.svg",
+      logo: `${baseUrl}aec.svg`,
       logoClass: "organization-logo",
     },
   ];
@@ -203,6 +207,14 @@ const Index = () => {
     },
   ];
 
+  const projectsWithBaseUrl = projects.map((project) => ({
+    ...project,
+    links: project.links.map((link) => ({
+      ...link,
+      icon: `${baseUrl}${link.icon.replace("/", "")}`,
+    })),
+  }));
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 animate-fade-in">
       <Header
@@ -231,7 +243,7 @@ const Index = () => {
 
       <Skills skills={skills} />
 
-      <Projects projects={projects} />
+      <Projects projects={projectsWithBaseUrl} />
 
       <Cta11
         heading="Let's work together"

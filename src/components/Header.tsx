@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ name, title, twitter }) => {
       <div className="flex flex-col items-center gap-3">
         <div className="rounded-full overflow-hidden w-20 h-20 md:w-24 md:h-24 border border-gray-200">
           <img
-            src="public\avatar.jpg"
+            src={`${import.meta.env.BASE_URL}avatar.jpg`}
             alt="Profile"
             className="w-full h-full object-cover"
           />
