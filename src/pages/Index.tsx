@@ -27,7 +27,7 @@ const Index = () => {
       company: "Leokraft",
       title: "ML Developer",
       period: "Aug 2022 - Nov 2022",
-      logo: `${baseUrl}lime.svg`,
+      logo: `${baseUrl}leokraft.svg`,
       logoClass: "organization-logo",
     },
   ];

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 interface EducationItem {
   institution: string;
@@ -19,8 +18,12 @@ const Education: React.FC<EducationProps> = ({ items }) => {
       <div className="space-y-5">
         {items.map((item, index) => (
           <div key={index} className="flex items-center gap-5">
-            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-gray-100 flex items-center justify-center shadow-sm">
-              <img src={item.logo} alt={item.institution} className="w-12 h-12 object-contain" />
+            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm">
+              <img
+                src={item.logo}
+                alt={item.institution}
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full">
               <div>
