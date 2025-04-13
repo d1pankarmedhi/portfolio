@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ name, title, twitter }) => {
           Hi, I&apos;m {name} <span className="wave">👋</span>
         </h1>
         <p className="text-lg mt-2 max-w-lg">
-          {title} 🎓 I love building things.
+          {title} 🎓 I love building cool things.
           {twitter && <span></span>}
         </p>
       </div>
