@@ -17,14 +17,14 @@ const Index = () => {
   // Sample data for the portfolio
   const workExperience = [
     {
-      company: "Flexday",
+      company: "Flexday AI",
       title: "Machine Learning Engineer",
       period: "Nov 2022 - Present",
       logo: `${baseUrl}flexday.svg`,
       logoClass: "organization-logo",
     },
     {
-      company: "Leokraft",
+      company: "Leokraft Technologies",
       title: "ML Developer",
       period: "Aug 2022 - Nov 2022",
       logo: `${baseUrl}leokraft.svg`,
