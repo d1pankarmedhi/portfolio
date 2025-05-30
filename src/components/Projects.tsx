@@ -35,7 +35,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
     <section className="mb-12 relative">
       <h2 className="text-xl font-bold mb-6">Projects</h2>
 
-      <div className="relative w-full px-6">
+      <div className="relative w-full">
         <Carousel>
           <CarouselContent className="-ml-4">
             {projects.map((project, index) => (

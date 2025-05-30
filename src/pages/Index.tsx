@@ -62,12 +62,27 @@ const Index = () => {
     "SonarQube",
     "Github Actions",
   ];
+
   const projects = [
+    {
+      title: "MiniNet18",
+      description:
+        "Pruned & Quantized ResNet18 for image classification for > 6x efficiency in memory.",
+      period: "2025",
+      image:
+        "https://github.com/user-attachments/assets/d26a4c9e-3560-4495-9077-9daaa31fd209",
+      links: [
+        {
+          icon: "/github.svg",
+          url: "https://github.com/d1pankarmedhi/mininet18",
+        },
+      ],
+    },
     {
       title: "InsightFlow",
       description:
         "AI Agentic system for generating analytical reports from unstructured data.",
-      period: "2024 - 2025",
+      period: "2025",
       image:
         "https://github.com/user-attachments/assets/7cb98fe4-0cc0-4fdc-86d9-75c4cd1befe9",
       links: [
@@ -219,7 +234,7 @@ const Index = () => {
     <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 animate-fade-in">
       <Header
         name="Dipankar Medhi"
-        title="AI & Machine Learning Engineer"
+        title="AI & Machine Learning Engineer. I work with Neural Networks 🧠"
         twitter=""
       />
 
@@ -227,11 +242,12 @@ const Index = () => {
         content={
           <div>
             <p>
-              I am a machine learning engineer with a passion for deep neural
-              networks and their applications in various domains. I have a
-              strong foundation in machine learning, deep learning, and computer
-              vision. I am also proficient in natural language processing and
-              its applications.
+              I am a AI/ML Engineer with 3+ years of experience in building
+              scalable AI systems. I have a strong background in machine
+              learning, deep learning, and software engineering, with a focus on
+              developing efficient and robust AI solutions. My expertise
+              includes working with large language models, computer vision, and
+              AI infrastructure.
             </p>
           </div>
         }
