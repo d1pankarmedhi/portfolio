@@ -31,7 +31,8 @@ const Header: React.FC<HeaderProps> = ({ name, title, twitter }) => {
         <Button variant="outline" size="sm" className="flex items-center gap-2">
           <Download size={16} />
           <a
-            href="https://drive.google.com/uc?export=download&id=1V7ENLgkUKWvZ2Ij7O96KZ7N2TfNyWl4e"
+            // href="https://drive.google.com/uc?export=download&id=1V7ENLgkUKWvZ2Ij7O96KZ7N2TfNyWl4e"
+            href="https://drive.google.com/file/d/1V7ENLgkUKWvZ2Ij7O96KZ7N2TfNyWl4e/view?usp=sharing"
             download
           >
             Resume
