@@ -65,6 +65,46 @@ const Index = () => {
 
   const projects = [
     {
+      title: "TinyWhisper",
+      description:
+        "A minimal implementation of Whisper like encoder-decoder ASR model.",
+      period: "2025",
+      image:
+        "https://github.com/user-attachments/assets/5f0da975-5dc4-46e9-ab1a-6e7899fef32b",
+      links: [
+        {
+          icon: "/github.svg",
+          url: "https://github.com/d1pankarmedhi/tiny-whisper",
+        },
+      ],
+    },
+    {
+      title: "BPE Tokenizer",
+      description: "Byte Pair Encoding Tokenizer with Python.",
+      period: "2025",
+      image:
+        "https://github.com/user-attachments/assets/dbcad90f-0d78-4407-a48d-4973027fb9b2",
+      links: [
+        {
+          icon: "/github.svg",
+          url: "https://github.com/d1pankarmedhi/bpetokenizer",
+        },
+      ],
+    },
+    {
+      title: "SmallLM",
+      description: "A tiny, GPT-like language model with Pytorch.",
+      period: "2025",
+      image:
+        "https://github.com/user-attachments/assets/271fe3e1-07cb-4cbd-a3ea-1f3d32d7d2d3",
+      links: [
+        {
+          icon: "/github.svg",
+          url: "https://github.com/d1pankarmedhi/smallLM",
+        },
+      ],
+    },
+    {
       title: "MiniNet18",
       description:
         "Pruned & Quantized ResNet18 for image classification for > 6x efficiency in memory.",
@@ -236,21 +276,6 @@ const Index = () => {
         name="Dipankar Medhi"
         title="AI & Machine Learning Engineer. I work with Neural Networks 🧠"
         twitter=""
-      />
-
-      <About
-        content={
-          <div>
-            <p>
-              I am a AI/ML Engineer with 3+ years of experience in building
-              scalable AI systems. I have a strong background in machine
-              learning, deep learning, and software engineering, with a focus on
-              developing efficient and robust AI solutions. My expertise
-              includes working with large language models, computer vision, and
-              AI infrastructure.
-            </p>
-          </div>
-        }
       />
 
       <WorkExperience items={workExperience} />

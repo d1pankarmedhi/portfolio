@@ -33,7 +33,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 
   return (
     <section className="mb-12 relative">
-      <h2 className="text-xl font-bold mb-6">Projects</h2>
+      <h2 className="text-xl font-bold mb-6">Featured</h2>
 
       <div className="relative w-full">
         <Carousel>
