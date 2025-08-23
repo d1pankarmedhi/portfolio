@@ -26,7 +26,7 @@ const socialLinks: SocialLink[] = [
   //   },
   {
     name: "Blog",
-    url: "https://medium.com/@d1pankarmedhi",
+    url: "https://dipankarmedh1.medium.com/",
     icon: <BookText className="w-4 h-4" />,
   },
 ];
