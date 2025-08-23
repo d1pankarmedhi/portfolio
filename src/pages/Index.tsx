@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import SocialLinks from "../components/SocialLinks";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
 import Education from "../components/Education";
@@ -277,6 +278,8 @@ const Index = () => {
         title="AI & Machine Learning Engineer. I work with Neural Networks 🧠"
         twitter=""
       />
+
+      <SocialLinks />
 
       <WorkExperience items={workExperience} />
 

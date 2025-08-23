@@ -10,12 +10,12 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ name, title, twitter }) => {
   return (
-    <div className="flex flex-col gap-6 mb-12">
-      <div>
-        <h1 className="text-4xl font-bold flex items-center gap-2">
+    <div className="flex flex-col items-center text-center gap-6 mb-12">
+      <div className="max-w-2xl">
+        <h1 className="text-4xl font-bold flex items-center justify-center gap-2">
           Hi, I&apos;m {name} <span className="wave">👋</span>
         </h1>
-        <p className="text-lg mt-2 max-w-lg">
+        <p className="text-lg mt-4 mx-auto">
           {title}
           {twitter && <span></span>}
         </p>
@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ name, title, twitter }) => {
       <Button
         variant="outline"
         size="sm"
-        className="flex items-center gap-2 w-fit"
+        className="flex items-center gap-2 hover:scale-105 transition-transform duration-200"
       >
         <Download size={16} />
         <a
