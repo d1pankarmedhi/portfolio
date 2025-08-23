@@ -6,6 +6,12 @@ import {
   CarouselItem,
   CarouselNavigation,
 } from "@/components/ui/custom-carousel";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ProjectLink {
   icon: string;
@@ -43,40 +49,58 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 key={index}
                 className="basis-full sm:basis-1/2 md:basis-1/3 pl-4"
               >
-                <Card className="h-[400px] flex flex-col">
-                  <div className="h-48 shrink-0 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-4 flex flex-col flex-1">
-                    <h3 className="font-bold text-lg">{project.title}</h3>
-                    <p className="text-sm text-gray-600 mb-2">
-                      {project.period}
-                    </p>
-                    <p className="text-sm mb-4 flex-1">
-                      {truncateText(project.description)}
-                    </p>
-                    <div className="flex gap-2">
-                      {project.links.map((link, linkIndex) => (
-                        <a
-                          key={linkIndex}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img
-                            src={link.icon}
-                            alt="Link"
-                            className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity"
-                          />
-                        </a>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="relative group">
+                  <a
+                    href={project.links[0]?.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block sm:pointer-events-none"
+                  >
+                    <Card className="h-[400px] flex flex-col">
+                      <div className="h-48 shrink-0 overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <CardContent className="p-4 flex flex-col flex-1">
+                        <h3 className="font-bold text-lg">{project.title}</h3>
+                        <p className="text-sm text-gray-600 mb-2">
+                          {project.period}
+                        </p>
+                        <p className="text-sm mb-4 flex-1">
+                          {truncateText(project.description)}
+                        </p>
+                        <div className="flex gap-2 sm:relative sm:z-10">
+                          <TooltipProvider delayDuration={0}>
+                            {project.links.map((link, linkIndex) => (
+                              <Tooltip key={linkIndex}>
+                                <TooltipTrigger asChild>
+                                  <a
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="sm:pointer-events-auto"
+                                  >
+                                    <img
+                                      src={link.icon}
+                                      alt="Link"
+                                      className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity"
+                                    />
+                                  </a>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                  <p>See project</p>
+                                </TooltipContent>
+                              </Tooltip>
+                            ))}
+                          </TooltipProvider>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </a>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
