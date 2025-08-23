@@ -18,11 +18,11 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ items }) => {
       <div className="space-y-5">
         {items.map((item, index) => (
           <div key={index} className="flex items-center gap-5">
-            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-white flex items-center justify-center shadow-sm">
+            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-white flex items-center justify-center border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-200 hover:border-gray-200">
               <img
                 src={item.logo}
                 alt={item.company}
-                className="w-12 h-12 object-contain"
+                className="w-11 h-11 object-contain transform hover:scale-105 transition-transform duration-200"
               />
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full">
