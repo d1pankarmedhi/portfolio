@@ -285,7 +285,26 @@ const Index = () => {
 
       <Education items={education} />
 
-      <Skills skills={skills} />
+      <Skills
+        skills={skills}
+        badges={[
+          {
+            image: `${baseUrl}badges/Blue-round.png`,
+            alt: "Arrikto Community Training: KubeFlow",
+            link: "your-credential-link-here",
+          },
+          {
+            image: `${baseUrl}badges/K8-architech.png`,
+            alt: "K8s Architect by Kasten.io",
+            link: "your-credential-link-here",
+          },
+          {
+            image: `${baseUrl}badges/sodacode-badge.png`,
+            alt: "Sodacode Hackathon",
+            link: "your-credential-link-here",
+          },
+        ]}
+      />
 
       <Projects projects={projectsWithBaseUrl} />
 
