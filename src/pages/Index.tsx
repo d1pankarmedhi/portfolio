@@ -289,19 +289,64 @@ const Index = () => {
         skills={skills}
         badges={[
           {
+            image:
+              "https://cdn.qwiklabs.com/%2Fb6vXtWRtaGoDla7LMwPf7bX6UgDdY81abF2IU9Ouyc%3D",
+            alt: "Develop Google Cloud Network",
+          },
+          {
+            image:
+              "https://cdn.qwiklabs.com/GvY5SJH%2BEY6ciLs4afGYL1CYdc2GMpyoCXgM4DrS7cQ%3D",
+            alt: "Implement Cloud Security Fundamentals on Google Cloud",
+          },
+          {
+            image:
+              "https://cdn.qwiklabs.com/%2Fb6vXtWRtaGoDla7LMwPf7bX6UgDdY81abF2IU9Ouyc%3D",
+            alt: "Build a Secure Google Cloud Network",
+          },
+          {
+            image:
+              "https://cdn.qwiklabs.com/gwaziiY9l16dYBocReK5WM6Xe%2Ft3NoOo4026BzAdP%2FY%3D",
+            alt: "Implement Load Balancing on Compute Engine",
+          },
+          {
+            image:
+              "https://cdn.qwiklabs.com/t0b88bg6YHVVcyfjgBBGP%2BmVfr2k8zm1qrR9os9JBLc%3D",
+            alt: "Set Up an App Dev Environment on Google Cloud",
+          },
+          {
             image: `${baseUrl}badges/Blue-round.png`,
-            alt: "Arrikto Community Training: KubeFlow",
+            alt: "Arrikto Community Training",
+            description: "KubeFlow Fundamentals",
             link: "your-credential-link-here",
           },
           {
             image: `${baseUrl}badges/K8-architech.png`,
-            alt: "K8s Architect by Kasten.io",
+            alt: "K8s Architect",
+            description: "Learning Kasten.io",
             link: "your-credential-link-here",
           },
           {
             image: `${baseUrl}badges/sodacode-badge.png`,
             alt: "Sodacode Hackathon",
             link: "your-credential-link-here",
+          },
+          {
+            image:
+              "https://learn.kodekloud.com/_next/image?url=https%3A%2F%2Fcertificates.kodekloud.com%2F3b5aded2-de93-45b2-afc2-7e0b4f812071%2F07e9e4b2-0b65-490c-87d7-22d243e0709b%2F2D01AF051C5C-2DEA8F590C6A-2D01A8D20C0E.jpg%3Ft%3D2024-08-16T11%3A23%3A02Z&w=828&q=75",
+            alt: "Amazon Elastic Container Service (AWS ECS)",
+            description: "KodeKloud",
+          },
+          {
+            image:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8_ACwdQT0NMs_ptU8917_1THnLQqxK_u8Q&s",
+            alt: "Amazon Redshift Service Primer",
+            description: "AWS Training and Certification",
+          },
+          {
+            image:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8_ACwdQT0NMs_ptU8917_1THnLQqxK_u8Q&s",
+            alt: "Amazon Kinesis Stream",
+            description: "AWS Training and Certification",
           },
         ]}
       />
