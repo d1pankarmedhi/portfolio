@@ -22,7 +22,7 @@ const Featured = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className="w-full max-w-3xl p-6 bg-gradient-to-r from-yellow-50/10 to-yellow-100/10 border border-yellow-200/20 cursor-pointer hover:bg-yellow-100/5 transition-colors">
+        <Card className="w-full max-w-3xl p-6 bg-gradient-to-r from-yellow-100/20 to-amber-100/20 dark:from-yellow-50/10 dark:to-yellow-100/10 border border-yellow-200/20 cursor-pointer hover:bg-yellow-100/5 transition-colors">
           <div className="flex items-center gap-4">
             <div className="p-2 rounded-full bg-yellow-100/20">
               <Trophy className="w-6 h-6 text-yellow-500" />
