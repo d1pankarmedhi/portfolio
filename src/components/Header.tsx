@@ -46,8 +46,8 @@ const Featured = () => {
             <Trophy className="w-8 h-8 text-yellow-500" /> 
             Hackathon Champion 2025
           </DialogTitle>
+            AI Innovathon • October 2025
           <DialogDescription>
-            Flexday Innovathon • October 2025
           </DialogDescription>
         </DialogHeader>
         
@@ -56,14 +56,9 @@ const Featured = () => {
             {/* Project Images */}
             <div className="grid grid-cols-2 gap-4">
               <img 
-                src="/achievements/trophy.jpg" 
+                src="achievements/ai_innovathon_trophy.png" 
                 alt="Hackathon Trophy" 
-                className="rounded-lg w-full h-48 object-cover"
-              />
-              <img 
-                src="/achievements/certificate.jpg" 
-                alt="Achievement Certificate" 
-                className="rounded-lg w-full h-48 object-cover"
+                className="rounded-lg w-30 h-40 object-cover"
               />
             </div>
 
