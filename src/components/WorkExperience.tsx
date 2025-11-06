@@ -17,7 +17,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ items }) => {
       <h2 className="text-xl font-bold mb-6">Work Experience</h2>
       <div className="space-y-5">
         {items.map((item, index) => (
-          <div key={index} className="flex items-center gap-5">
+          <div key={index} className="flex items-center gap-5 p-4 rounded-lg bg-gradient-to-r from-yellow-100/20 to-amber-100/30 dark:from-yellow-50/10 dark:to-yellow-100/10 border border-amber-200/30 dark:border-yellow-200/20 hover:bg-amber-100/40 dark:hover:bg-yellow-100/5 transition-all duration-200 shadow-sm">
             <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-white flex items-center justify-center border border-gray-100 shadow-md hover:shadow-lg transition-shadow duration-200 hover:border-gray-200">
               <img
                 src={item.logo}
@@ -28,9 +28,9 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ items }) => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between w-full">
               <div>
                 <div className="font-medium">{item.company}</div>
-                <div className="text-sm text-gray-600">{item.title}</div>
+                <div className="text-sm text-muted-foreground">{item.title}</div>
               </div>
-              <div className="text-sm text-gray-600 mt-1 sm:mt-0">
+              <div className="text-sm text-muted-foreground mt-1 sm:mt-0">
                 {item.period}
               </div>
             </div>

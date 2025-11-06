@@ -25,16 +25,19 @@ const Skills: React.FC<SkillsProps> = ({ skills, badges }) => {
     <section className="mb-12">
       <h2 className="text-xl font-bold mb-6">Skills</h2>
 
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span
-            key={index}
-            className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm"
-          >
-            {skill}
-          </span>
-        ))}
+      <div className="p-6 rounded-lg bg-gradient-to-r from-yellow-100/20 to-amber-100/30 dark:from-yellow-50/10 dark:to-yellow-100/10 border border-amber-200/30 dark:border-yellow-200/20">
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <span
+              key={index}
+              className="bg-white/50 dark:bg-gray-900/50 border border-amber-200/30 dark:border-yellow-200/20 text-foreground px-3 py-1 rounded-full text-sm hover:bg-amber-100/40 dark:hover:bg-yellow-100/5 transition-all duration-200 shadow-sm"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
+
       {badges && badges.length > 0 && (
         <div className="mt-8 mb-6">
           <TooltipProvider delayDuration={0}>
@@ -53,14 +56,14 @@ const Skills: React.FC<SkillsProps> = ({ skills, badges }) => {
                           <img
                             src={badge.image}
                             alt={badge.alt}
-                            className="w-24 h-24 rounded-full object-contain p-1 border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 hover:border-gray-200"
+                            className="w-24 h-24 rounded-full object-contain p-1 border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm hover:shadow-md transition-all duration-200 hover:border-gray-200 dark:hover:border-gray-700"
                           />
                         </a>
                       ) : (
                         <img
                           src={badge.image}
                           alt={badge.alt}
-                          className="w-24 h-24 rounded-full object-contain p-1 border border-gray-100 bg-white shadow-sm"
+                            className="w-24 h-24 rounded-full object-contain p-1 border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm"
                         />
                       )}
                     </div>
@@ -68,12 +71,12 @@ const Skills: React.FC<SkillsProps> = ({ skills, badges }) => {
                   <TooltipContent className="max-w-[200px] text-center">
                     <p className="font-medium">{badge.alt}</p>
                     {badge.description && (
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className="text-sm text-muted-foreground mt-1">
                         {badge.description}
                       </p>
                     )}
                     {(badge.issuer || badge.issuedDate) && (
-                      <div className="text-xs text-gray-400 mt-1">
+                      <div className="text-xs text-muted-foreground/70 mt-1">
                         {badge.issuer && <p>{badge.issuer}</p>}
                         {badge.issuedDate && <p>Issued: {badge.issuedDate}</p>}
                       </div>

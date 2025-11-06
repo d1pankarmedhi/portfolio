@@ -56,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                     rel="noopener noreferrer"
                     className="block sm:pointer-events-none"
                   >
-                    <Card className="h-[400px] flex flex-col">
+                    <Card className="h-[400px] flex flex-col bg-gradient-to-r from-yellow-100/20 to-amber-100/30 dark:from-yellow-50/10 dark:to-yellow-100/10 border border-amber-200/30 dark:border-yellow-200/20 hover:bg-amber-100/40 dark:hover:bg-yellow-100/5 transition-all duration-200 shadow-sm">
                       <div className="h-48 shrink-0 overflow-hidden">
                         <img
                           src={project.image}
@@ -66,7 +66,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       </div>
                       <CardContent className="p-4 flex flex-col flex-1">
                         <h3 className="font-bold text-lg">{project.title}</h3>
-                        <p className="text-sm text-gray-600 mb-2">
+                        <p className="text-sm text-muted-foreground mb-2">
                           {project.period}
                         </p>
                         <p className="text-sm mb-4 flex-1">
@@ -86,7 +86,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                                     <img
                                       src={link.icon}
                                       alt="Link"
-                                      className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity"
+                                      className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity"
                                     />
                                   </a>
                                 </TooltipTrigger>
