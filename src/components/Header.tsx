@@ -28,7 +28,7 @@ const Featured = () => {
               <Trophy className="w-6 h-6 text-yellow-500" />
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-lg">Hackathon Winner 🎉</h3>
+              <h3 className="font-semibold text-lg">Hackathon Winner 2025 🎉</h3>
               <p className="text-sm text-muted-foreground mt-1">
                 Built a marketing and outreach agent for automated client acquisition
               </p>
