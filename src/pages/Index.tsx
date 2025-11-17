@@ -66,6 +66,34 @@ const Index = () => {
 
   const projects = [
     {
+      title: "Diffusion",
+      description:
+        "Conditional Diffusion Models for Image Generation using PyTorch.",
+      period: "2025",
+      image:
+        "https://github.com/user-attachments/assets/6793593e-e3a7-4e28-8ee8-93d4e925c885",
+      links: [
+        {
+          icon: "/github.svg",
+          url: "https://github.com/d1pankarmedhi/diffusion",
+        },
+      ],
+    },
+    {
+      title: "CascadeS2S",
+      description:
+        "Cascade style speech-to-speech synthesis model for voice conversations.",
+      period: "2025",
+      image:
+        "https://github.com/user-attachments/assets/552b2bdc-0ce1-4ad5-8a3a-f85df39567a1",
+      links: [
+        {
+          icon: "/github.svg",
+          url: "https://github.com/d1pankarmedhi/CascadeS2S",
+        },
+      ],
+    },
+    {
       title: "TinyWhisper",
       description:
         "A minimal implementation of Whisper like encoder-decoder ASR model.",

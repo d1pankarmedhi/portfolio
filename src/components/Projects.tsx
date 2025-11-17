@@ -86,7 +86,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                                     <img
                                       src={link.icon}
                                       alt="Link"
-                                      className="w-6 h-6 opacity-90 hover:opacity-100 transition-opacity"
+                                      className="w-6 h-6 opacity-100 hover:opacity-100 transition-opacity dark:invert"
                                     />
                                   </a>
                                 </TooltipTrigger>
