@@ -344,18 +344,16 @@ const Index = () => {
             image: `${baseUrl}badges/Blue-round.png`,
             alt: "Arrikto Community Training",
             description: "KubeFlow Fundamentals",
-            link: "your-credential-link-here",
           },
           {
             image: `${baseUrl}badges/K8-architech.png`,
             alt: "K8s Architect",
             description: "Learning Kasten.io",
-            link: "your-credential-link-here",
           },
           {
             image: `${baseUrl}badges/sodacode-badge.png`,
             alt: "Sodacode Hackathon",
-            link: "your-credential-link-here",
+            
           },
           {
             image:
